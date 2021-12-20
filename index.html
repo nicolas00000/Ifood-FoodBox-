@@ -10,8 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="estilos.css">
-<link rel="stylesheet" href="resete.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="resete.css">
+    <link rel="stylesheet" href="java.js">
     <link
       href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
@@ -179,65 +180,79 @@
       <!-- final container 1 -->
     </div>
     <div class="branco">
-      <div class="finalizar fazerpedido">finalizar pedido</div onclick="habilitarbotao(`.fazerpedido`)">
-    </div>
+      <a href="www.globo.com" class="linck">
+      <div class="finalizar fazerpedido"> finalizar pedido </div onclick="habilitarbotao(`.fazerpedido`)">
+      </a>
+      </div>
     <script>
       ///uma variavel fora de uma funcao pode ser vista e chamada de onde for
+ let contador = 0;
+ // indentificar se nao à mais de uma caixa verde
+function ficarVerde(oprato) {
+   const selecionado = document.querySelector(".comidas .selecionado"); // tirar classe selecionada de quem tem ela
+   if (selecionado !== null) {
+     selecionado.classList.remove("selecionado");
+   } else{
+     contador = contador + 1 ;
+}
 
-      let contador = 0;
-      // indentificar se nao à mais de uma caixa verde
-      function ficarVerde(oprato) {
-        const selecionado = document.querySelector(".comidas .selecionado"); // tirar classe selecionada de quem tem ela
-        if (selecionado !== null) {
-          selecionado.classList.remove("selecionado");
-        } 
+   // deixar uma unica caixa verde
+   //primeiro indicar a variavel
+   const seletor = "." + oprato;
+   const botao = document.querySelector(seletor); //acha a variavel selecionada
 
-        // deixar uma unica caixa verde
-        //primeiro indicar a variavel
-        const seletor = "." + oprato;
-        const botao = document.querySelector(seletor); //acha a variavel selecionada
+   botao.classList.add("selecionado"); //modifica a borda para verde
+   habilitarbotao()
+ }
 
-        botao.classList.add("selecionado"); //modifica a borda para verde
-      }
+ function bebida(suco) {
+   const selecionado = document.querySelector(".bebidas .selecionado"); // tirar classe selecionada de quem tem ela
+   if (selecionado !== null) {
+     selecionado.classList.remove("selecionado");
+   } else {
+     contador = contador + 1;
+   }
 
-      function bebida(suco) {
-        const selecionado = document.querySelector(".bebidas .selecionado"); // tirar classe selecionada de quem tem ela
-        if (selecionado !== null) {
-          selecionado.classList.remove("selecionado");
-        } else {
-          contador = contador + 1;
-        }
+   // deixar uma unica caixa verde
+   //primeiro indicar a variavel
+   const seletor = "." + suco;
+   const botao = document.querySelector(seletor); //acha a variavel selecionada
 
-        // deixar uma unica caixa verde
-        //primeiro indicar a variavel
-        const seletor = "." + suco;
-        const botao = document.querySelector(seletor); //acha a variavel selecionada
+   botao.classList.add("selecionado"); //modifica a borda para verde
+   habilitarbotao()
+ }
+ // sobremesas
+ function doce(bolinho) {
+   const selecionado = document.querySelector(".bolos .selecionado"); // tirar classe selecionada de quem tem ela
+   if (selecionado !== null) {
+     selecionado.classList.remove("selecionado");
+   } else {
+     contador = contador + 1;
+   }
+   // deixar uma unica caixa verde
+   //primeiro indicar a variavel
+   const seletor = "." + bolinho;
+   const botao = document.querySelector(seletor); //acha a variavel selecionada
 
-        botao.classList.add("selecionado"); //modifica a borda para verde
-      }
-      // sobremesas
-      function doce(bolinho) {
-        const selecionado = document.querySelector(".bolos .selecionado"); // tirar classe selecionada de quem tem ela
-        if (selecionado !== null) {
-          selecionado.classList.remove("selecionado");
-        } else {
-          contador = contador + 1;
-        }
-        // deixar uma unica caixa verde
-        //primeiro indicar a variavel
-        const seletor = "." + bolinho;
-        const botao = document.querySelector(seletor); //acha a variavel selecionada
-
-        botao.classList.add("selecionado"); //modifica a borda para verde
-      }
+   botao.classList.add("selecionado"); //modifica a borda para verde
+   habilitarbotao()
+ }
 
 
-      function habilitarbotao() {
-        if ( contador === 3)
-      // const = botaofinal = document.querySelector(".fazerpedido")
-        botaofinal.classList.add("ativo")
-        botao.innerHTML = "fechar pedido"
-      }
+ function habilitarbotao() {
+   console.log(contador)
+   
+  
+   if (contador === 3) {
+    const selecionado = document.querySelector(".finalizar")
+  
+     const agr = selecionado.classList.add("ativo");
+    selecionado.innerHTML = "fechar pedido"
+    }
+ }
+
+
+ 
     </script>
   </body>
 </html>
