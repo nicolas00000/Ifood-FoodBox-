@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="resete.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>FoodBox</title>
+  </head>
+  <body>
+    <div class="topo">
+      <strong class="titulo">FoodBox</strong>
+      <span class="subtit"> sua comida favorita em 6 minutos</span>
+    </div>
+
+    <strong class="primeiro"> Primeiro, seu prato</strong>
+    <!-- container -->
+    <div class="container1 comidas">
+      <div class="caixa1 prato1" onclick="ficarVerde(`prato1`)">
+        <img
+          src="https://http2.mlstatic.com/D_NQ_NP_835038-MLB29512330037_022019-O.jpg"
+          class="fotos"
+        />
+        <strong class="nome">carne ovo e batata</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$: 14,99</strong>
+      </div>
+
+      <!--  -->
+      <div id="comida1" class="caixa1 prato2" onclick="ficarVerde(`prato2`)">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_916840-MLB46508806120_062021-O.jpg" class="fotos" />
+        <strong class="nome">carne ovo e batata</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$: 14,99</strong>
+      </div>
+      <!--  -->
+      <div id="comida2" class="caixa1 prato3" onclick="ficarVerde(`prato3`)">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4KxrbIMUnSj_Xd5UE14TZV0QDNebRQ5aBIg&usqp=CAU"
+          class="fotos"
+        />
+        <span class="nome"> arroz e panquecas </span>
+        <br />
+        <strong class="descriçao"> arroz feijão salada e panquecas</strong>
+        <strong class="valor"> R$:14,99</strong>
+      </div>
+      <!--  -->
+      <div id="comida" class="caixa1 prato4" onclick="ficarVerde(`prato4`)">
+        <img
+          src="https://http2.mlstatic.com/D_NQ_NP_916840-MLB46508806120_062021-O.jpg"
+          class="fotos"
+        />
+        <strong class="nome">bife c/ salada</strong>
+        <br />
+        <span class="descriçao">
+          pedaço 300 g bife grelhado c/ alface e tomate</span
+        >
+        <strong class="valor"> R$:14,99</strong>
+      </div>
+      <!--  -->
+      <div id="comida" class="caixa1 prato5" onclick="ficarVerde(`prato5`)">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_916840-MLB46508806120_062021-O.jpg" class="fotos" />
+      </div>
+      <!--  -->
+      <div id="comida" class="caixa1 prato6" onclick="ficarVerde('prato6')">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_916840-MLB46508806120_062021-O.jpg" class="fotos" />
+      </div>
+      <!--  -->
+      <!-- final container 1 -->
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <strong class="primeiro"> Agora sua bebida</strong>
+    <!-- container -->
+    <div class="container1 bebidas">
+      <div class="caixa3 bebida1" onclick="bebida('bebida1')">
+        <img src="imagem/download.jfif" class="bebida" />
+        <strong class="nome">sprite</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$: 14,99</strong>
+      </div>
+
+      <!--  -->
+      <div class="caixa3 bebida2" onclick="bebida('bebida2')">
+        <img src="imagem/cocacola.jfif" class="bebida" />
+        <strong class="nome">coca-cola</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$: 14,99</strong>
+      </div>
+      <!--  -->
+      <div class="caixa3 bebida3" onclick="bebida('bebida3')">
+        <img src="imagem/fanta.jfif" class="fotos" />
+        <strong class="nome">fanta laranja</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$:14,99</strong>
+      </div>
+      <!--  -->
+      <div class="caixa3 bebida4" onclick="bebida('bebida4')">
+        <img src="imagem/sprite.jfif" class="fotos" />
+      </div>
+      <!--  -->
+      <div class="caixa3 bebida5" onclick="bebida('bebida5')">
+        <img src="imagem/cocacola.jfif" class="fotos" />
+      </div>
+      <!--  -->
+      <div class="caixa3 bebida6" onclick="bebida('bebida6')">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_916840-MLB46508806120_062021-O.jpg" class="fotos" />
+      </div>
+      <!--  -->
+      <!-- final container 1 -->
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <strong class="primeiro">Sobremesas</strong>
+    <!-- container -->
+    <div class="container1 bolos margem">
+      <div class="caixa4 bolo1" onclick="doce('bolo1')">
+        <img src="imagem/bolo.jfif" class="fotos" />
+        <strong class="nome">bolo de chocolate</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$: 14,99</strong>
+      </div>
+
+      <!--  -->
+      <div class="caixa4 bolo2" onclick="doce('bolo2')">
+        <img src="imagem/cake.jfif" class="fotos" />
+        <strong class="nome">cup-cake</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$: 14,99</strong>
+      </div>
+      <!--  -->
+      <div class="caixa4 bolo3" onclick="doce('bolo3')">
+        <img src="imagem/trufa.jfif" class="fotos" />
+        <strong class="nome">trufa recheada</strong>
+        <br />
+        <span class="descriçao"> arroz feijão e acompanha salada</span>
+        <strong class="valor"> R$:14,99</strong>
+      </div>
+      <!--  -->
+      <div class="caixa4 bolo4" onclick="doce('bolo4')">
+        <img
+          src="https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/08/musse-de-maracuja-facil-pratica.jpg"
+          class="fotos"
+        />
+      </div>
+      <!--  -->
+      <div class="caixa4 bolo5" onclick="doce('bolo5')">
+        <img
+          src="data:image/jpeg;base64,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"
+          class="fotos"
+        />
+      </div>
+      <!--  -->
+      <div class="caixa4 bolo6" onclick="doce('bolo6')">
+        <img src="imagem/bolo.jfif" class="fotos" />
+      </div>
+      <!--  -->
+      <!-- final container 1 -->
+    </div>
+    <div class="branco">
+      <div class="finalizar fazerpedido">finalizar pedido</div onclick="habilitarbotao(`.fazerpedido`)">
+    </div>
+    <script>
+      ///uma variavel fora de uma funcao pode ser vista e chamada de onde for
+
+      let contador = 0;
+      // indentificar se nao à mais de uma caixa verde
+      function ficarVerde(oprato) {
+        const selecionado = document.querySelector(".comidas .selecionado"); // tirar classe selecionada de quem tem ela
+        if (selecionado !== null) {
+          selecionado.classList.remove("selecionado");
+        } 
+
+        // deixar uma unica caixa verde
+        //primeiro indicar a variavel
+        const seletor = "." + oprato;
+        const botao = document.querySelector(seletor); //acha a variavel selecionada
+
+        botao.classList.add("selecionado"); //modifica a borda para verde
+      }
+
+      function bebida(suco) {
+        const selecionado = document.querySelector(".bebidas .selecionado"); // tirar classe selecionada de quem tem ela
+        if (selecionado !== null) {
+          selecionado.classList.remove("selecionado");
+        } else {
+          contador = contador + 1;
+        }
+
+        // deixar uma unica caixa verde
+        //primeiro indicar a variavel
+        const seletor = "." + suco;
+        const botao = document.querySelector(seletor); //acha a variavel selecionada
+
+        botao.classList.add("selecionado"); //modifica a borda para verde
+      }
+      // sobremesas
+      function doce(bolinho) {
+        const selecionado = document.querySelector(".bolos .selecionado"); // tirar classe selecionada de quem tem ela
+        if (selecionado !== null) {
+          selecionado.classList.remove("selecionado");
+        } else {
+          contador = contador + 1;
+        }
+        // deixar uma unica caixa verde
+        //primeiro indicar a variavel
+        const seletor = "." + bolinho;
+        const botao = document.querySelector(seletor); //acha a variavel selecionada
+
+        botao.classList.add("selecionado"); //modifica a borda para verde
+      }
+
+
+      function habilitarbotao() {
+        if ( contador === 3)
+      // const = botaofinal = document.querySelector(".fazerpedido")
+        botaofinal.classList.add("ativo")
+        botao.innerHTML = "fechar pedido"
+      }
+    </script>
+  </body>
+</html>
