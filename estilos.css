@@ -153,6 +153,7 @@ body {
   justify-content: center;
   text-justify: center;
   display: flex;
+  cursor: normal;
 }
 
 .selecionado {
@@ -182,6 +183,3 @@ body {
 }
 
 
-.branco a{
-  display: none;
-}
