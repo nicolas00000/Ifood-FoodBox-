@@ -2,6 +2,7 @@ img {
     border-radius: 5px;
   }
   
+  
 body {
   background-color: #e5e5e5;
 }
@@ -55,16 +56,12 @@ body {
 .container1 {
   background: #e5e5e5;
   position: relative;
-  height: 279px;
+  height: 295px;
   margin-top: 110px;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   box-sizing: border-box;
-
-  /* overflow-x: hidden; */
-  /* justify-content: space-around; */
-  /* align-items: center; */
 }
 
 .caixa1,
@@ -78,6 +75,7 @@ body {
   margin-left: 30px;
   border: 5px solid white;
   cursor: pointer;
+  position:relative;
 }
 
 .container1:nth-child(odd) {
@@ -123,6 +121,7 @@ body {
   font-weight: 600;
   font-family: "roboto";
   font-size: 16px;
+  width: 50%;
 }
 
 .bebida {
@@ -142,6 +141,7 @@ body {
   margin-top: 5px;
   margin-left: 30px;
   cursor: pointer;
+  position: relative;
 }
 
 .finalizar {
