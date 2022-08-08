@@ -1,223 +1,216 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link rel="shortcut icon" href="imagens/logo.jpg" class="title" style="width: 55px; height: 55px;" sizes="55x55">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="resete.css">
-    <link rel="stylesheet" href="java.js">
-    <link rel="stylesheet" href="imagens/imagens.png">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>FoodBox</title>
-  </head>
-  <!-- posso fazer isso com muito menos HTML usando um JSON e JS -->
-  <body>
-  
-    <header class="topo">
-      <strong class="titulo">FoodBox</strong>
-      <span class="subtit"> sua comida favorita em 6 minutos</span>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="shortcut icon" href="imagens/hamburguerlogo.png" class="title" style="width: 55px; height: 55px;"
+    sizes="55x55">
 
-    <strong class="primeiro"> Primeiro, seu prato</strong>
-    <!-- container -->
-    <section class="container1 comidas">
-      <div class="caixa1 prato1" onclick="ficarVerde('prato1', 'carne', 14,99)">
-        <img
-          src="https://http2.mlstatic.com/D_NQ_NP_835038-MLB29512330037_022019-O.jpg"
-          class="fotos"
-        />
-        <strong class="nome">carne ovo e batata</strong>
-        <br />
-        <span class="descriçao"> arroz feijão e acompanha salada</span>
-        <strong class="valor"> R$  14,99</strong>
-      </div>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="resete.css">
+  <link rel="stylesheet" href="script.js">
+  <link rel="stylesheet" href="imagens/imagens.png">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300&display=swap"
+    rel="stylesheet" />
 
-   
-      <div id="comida1" class="caixa1 prato2" onclick="ficarVerde('prato2', 'pure de batata')">
-        <img src="imagens/batata.jpg" class="fotos" alt="">
-        <strong class="nome">pure de batata</strong>
-        <br />
-        <span class="descriçao"> escondidinho de frango </span>
-        <strong class="valor"> R$  12,49</strong>
-      </div>
-   
-      <div id="comida2" class="caixa1 prato3" onclick="ficarVerde('prato3', 'panquecas')">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4KxrbIMUnSj_Xd5UE14TZV0QDNebRQ5aBIg&usqp=CAU"
-          class="fotos"
-        />
-        <span class="nome"> panquecas </span>
-        <br />
-        <strong class="descriçao"> arroz feijão salada e panquecas</strong>
-        <strong class="valor"> R$ 10,00</strong>
-      </div>
-   
-      <div id="comida" class="caixa1 prato4" onclick="ficarVerde('prato4', 'bife acebolado')">
-        <img src="imagens/bife.jpg" class="fotos" />
-        <strong class="nome">bife c/ salada</strong>
-        <br />
-        <span class="descriçao">
-          pedaço 300 g bife grelhado </span
-        >
-        <strong class="valor"> R$ 18,20</strong>
-      </div>
-   
-      <div id="comida" class="caixa1 prato5" onclick="ficarVerde('prato5', 'salada')">
-        <img src="imagens/salada.jpg" class="fotos" alt="">
-        <strong class="nome">salada</strong>
-        <br />
-        <span class="descriçao">
-         salada fresca para sua saúde </span
-        >
-        <strong class="valor"> R$ 7,50</strong>
-      </div>
-   
-      <div id="comida" class="caixa1 prato6" onclick="ficarVerde('prato6', 'feijoada')">
-        <img src="imagens/feijoada.jpg" class="fotos" alt="">
-        <strong class="nome">feijoada</strong>
-        <br />
-        <span class="descriçao">
-          feijoada mineira c/ linguiça</span
-        >
-        <strong class="valor"> R$ 14,50</strong>
-      </div>
-   
-      <!-- final container 1 -->
-    </section>
- 
+  <title>FoodBox</title>
+</head>
+<!-- posso fazer isso com muito menos HTML usando um JSON e JS -->
 
- 
-    <strong class="primeiro"> Agora sua bebida</strong>
-    <!-- container -->
-    <section class="container1 bebidas">
-      <div class="caixa3 bebida1" onclick="bebida('bebida1', 'sprite')">
-        <img src="imagens/sprite.png" alt="" class="bebida">
-        <strong class="nome">sprite</strong>
-        <br />
-        <span class="descriçao"> Spite lata 250ml </span>
-        <strong class="valor"> R$  8,50 </strong>
-      </div>
+<body>
 
-      
-      <div class="caixa3 bebida2" onclick="bebida('bebida2', 'coca cola')">
-        <img src="imagens/coca.jpg" alt="" class="bebida">
-        <strong class="nome">Coca-Cola</strong>
-        <br />
-        <span class="descriçao"> Garrafa 2L tamanho família</span>
-        <strong class="valor"> R$  10,99</strong>
-      </div>
-    
-      <div class="caixa3 bebida3" onclick="bebida('bebida3', 'fanta laranja')">
-        <img src="imagens/fanta.jpg" alt="" class="bebida">
-        <strong class="nome">Fanta laranja</strong>
-        <br />
-        <span class="descriçao"> refrigerante de laranja 250ml</span>
-        <strong class="valor"> R$ 8,99</strong>
-      </div>
-   
-      <div class="caixa3 bebida4" onclick="bebida('bebida4', 'fanta uva')">
-        <img src="imagens/fantauva.jpg" class="bebida" alt="">
-        <strong class="nome">Fanta uva</strong>
-        <br />
-        <span class="descriçao"> refrigerante de uva 250ml </span>
-        <strong class="valor"> R$ 8,99</strong>
-      </div>
-   
-      <div class="caixa3 bebida5" onclick="bebida('bebida5', 'agua mineral')">
-        <img src="imagens/agua.jpg" class="bebida" alt="">
-        <strong class="nome">Aguá mineral</strong>
-        <br />
-        <span class="descriçao"> Aguá mineral 300ml purificada</span>
-        <strong class="valor"> R$ 2,29</strong>
-      </div>
-   
-      <div class="caixa3 bebida6" onclick="bebida('bebida6', 'agua com gaz 300 ml' )">
-        <img src="imagens/aguacomgaz.jpg"  class="bebida" alt="">
-        <strong class="nome">Aguá com gaz</strong>
-        <br />
-        <span class="descriçao">Aguá com gaz geladinha</span>
-        <strong class="valor"> R$ 2,29</strong>
-      </div>
-   
-      <!-- final container 1 -->
-    </section>
- 
+  <header class="topo">
+    <strong class="titulo">FoodBox</strong>
+    <span class="subtit"> sua comida favorita em 6 minutos</span>
+  </header>
 
-  
-    <strong class="primeiro">Sobremesas</strong>
-    <!-- container -->
-    <section class="container1 bolos margem">
-      <div class="caixa4 bolo1" onclick="doce('bolo1', 'bolo de cenoura')">
-        <img src="imagens/bolo.jpg" class="fotos" alt="">
-        <strong class="nome">bolo de chocolate</strong>
-        <br />
-        <span class="descriçao"> bolo fofinho e quentinho</span>
-        <strong class="valor"> R$  14,99</strong>
-      </div>
-
-   
-      <div class="caixa4 bolo2" onclick="doce('bolo2', 'cocada')">
-        <img src="imagens/cake.jpg" class="fotos" alt="">        
-        <strong class="nome">cup-cake</strong>
-        <br />
-        <span class="descriçao"> pequeno e delicioso</span>
-        <strong class="valor"> R$  14,99</strong>
-      </div>
-   
-      <div class="caixa4 bolo3" onclick="doce('bolo3', 'brawnie')">
-        <img src="imagens/trufas.jpg" class="fotos" alt="">
-        <strong class="nome">Trufa recheada</strong>
-        <br />
-        <span class="descriçao"> trafa com muito recheio</span>
-        <strong class="valor"> R$ 14,99</strong>
-      </div>
-   
-      <div class="caixa4 bolo4" onclick="doce('bolo4', 'brigadeiro')">
-        <img src="imagens/brigadeiro.jpg" class="fotos" alt="">
-        <strong class="nome"> Brigadeiro</strong>
-        <br />
-        <span class="descriçao"> 15un brigadeiro </span>
-        <strong class="valor"> R$ 14,99</strong>
-      </div>
-   
-      <div class="caixa4 bolo5" onclick="doce('bolo5', 'mouse de maracuja')">
-        <img src="imagens/fuba.jpg" class="fotos" alt="">        
-        <strong class="nome"> Bolo de fuba </strong> 
-        <br />
-        <span class="descriçao">Tamanho familia super saboroso </span>
-        <strong class="valor"> R$ 14,99</strong>
-      </div>
-   
-      <div class="caixa4 bolo6" onclick="doce('bolo6', 'pe de moleque')">
-        <img src="imagens/pedemoleque.jpg" class="fotos" alt="">
-        <strong class="nome">Pé de moleque</strong>
-        <br />
-        <span class="descriçao">Amendoin com caramelo</span>
-        <strong class="valor"> R$ 14,99</strong>
-      </div>
-   
-      <!-- final container 1 -->
-    </section>
+  <strong class="primeiro"> Primeiro, seu prato</strong>
+  <!-- container -->
+  <section class="container1 comidas">
+    <div class="caixa1 prato1" onclick="ficarVerde('prato1', 'carne', 14,99)">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_835038-MLB29512330037_022019-O.jpg" class="fotos" />
+      <strong class="nome">carne ovo e batata</strong>
+      <br />
+      <span class="descriçao"> arroz feijão e acompanha salada</span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
 
 
-    <div class="branco" onclick="habilitar('.fim')">
-      
-      <a href="#" class="finalizar fazerpedido" onclick="habilitarbotao(`.fazerpedido`, `finalizar`)"> finalizar pedido   </a>
-     
-      </div>
-      <script src="script.js"></script>
-  </body>
+    <div id="comida1" class="caixa1 prato2" onclick="ficarVerde('prato2', 'pure de batata')">
+      <img src="imagens/batata.jpg" class="fotos" alt="">
+      <strong class="nome">pure de batata</strong>
+      <br />
+      <span class="descriçao"> escondidinho de frango </span>
+      <strong class="valor"> R$ 12,49</strong>
+    </div>
+
+    <div id="comida2" class="caixa1 prato3" onclick="ficarVerde('prato3', 'panquecas')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4KxrbIMUnSj_Xd5UE14TZV0QDNebRQ5aBIg&usqp=CAU"
+        class="fotos" />
+      <span class="nome"> panquecas </span>
+      <br />
+      <strong class="descriçao"> arroz feijão salada e panquecas</strong>
+      <strong class="valor"> R$ 10,00</strong>
+    </div>
+
+    <div id="comida" class="caixa1 prato4" onclick="ficarVerde('prato4', 'bife acebolado')">
+      <img src="imagens/bife.jpg" class="fotos" />
+      <strong class="nome">bife c/ salada</strong>
+      <br />
+      <span class="descriçao">
+        pedaço 300 g bife grelhado </span>
+      <strong class="valor"> R$ 18,20</strong>
+    </div>
+
+    <div id="comida" class="caixa1 prato5" onclick="ficarVerde('prato5', 'salada')">
+      <img src="imagens/salada.jpg" class="fotos" alt="">
+      <strong class="nome">salada</strong>
+      <br />
+      <span class="descriçao">
+        salada fresca para sua saúde </span>
+      <strong class="valor"> R$ 7,50</strong>
+    </div>
+
+    <div id="comida" class="caixa1 prato6" onclick="ficarVerde('prato6', 'feijoada')">
+      <img src="imagens/feijoada.jpg" class="fotos" alt="">
+      <strong class="nome">feijoada</strong>
+      <br />
+      <span class="descriçao">
+        feijoada mineira c/ linguiça</span>
+      <strong class="valor"> R$ 14,50</strong>
+    </div>
+
+    <!-- final container 1 -->
+  </section>
+
+
+
+  <strong class="primeiro"> Agora sua bebida</strong>
+  <!-- container -->
+  <section class="container1 bebidas">
+    <div class="caixa3 bebida1" onclick="bebida('bebida1', 'sprite')">
+      <img src="imagens/sprite.png" alt="" class="bebida">
+      <strong class="nome">sprite</strong>
+      <br />
+      <span class="descriçao"> Spite lata 250ml </span>
+      <strong class="valor"> R$ 8,50 </strong>
+    </div>
+
+
+    <div class="caixa3 bebida2" onclick="bebida('bebida2', 'coca cola')">
+      <img src="imagens/coca.jpg" alt="" class="bebida">
+      <strong class="nome">Coca-Cola</strong>
+      <br />
+      <span class="descriçao"> Garrafa 2L tamanho família</span>
+      <strong class="valor"> R$ 10,99</strong>
+    </div>
+
+    <div class="caixa3 bebida3" onclick="bebida('bebida3', 'fanta laranja')">
+      <img src="imagens/fanta.jpg" alt="" class="bebida">
+      <strong class="nome">Fanta laranja</strong>
+      <br />
+      <span class="descriçao"> refrigerante de laranja 250ml</span>
+      <strong class="valor"> R$ 8,99</strong>
+    </div>
+
+    <div class="caixa3 bebida4" onclick="bebida('bebida4', 'fanta uva')">
+      <img src="imagens/fantauva.jpg" class="bebida" alt="">
+      <strong class="nome">Fanta uva</strong>
+      <br />
+      <span class="descriçao"> refrigerante de uva 250ml </span>
+      <strong class="valor"> R$ 8,99</strong>
+    </div>
+
+    <div class="caixa3 bebida5" onclick="bebida('bebida5', 'agua mineral')">
+      <img src="imagens/agua.jpg" class="bebida" alt="">
+      <strong class="nome">Aguá mineral</strong>
+      <br />
+      <span class="descriçao"> Aguá mineral 300ml purificada</span>
+      <strong class="valor"> R$ 2,29</strong>
+    </div>
+
+    <div class="caixa3 bebida6" onclick="bebida('bebida6', 'agua com gaz 300 ml' )">
+      <img src="imagens/aguacomgaz.jpg" class="bebida" alt="">
+      <strong class="nome">Aguá com gaz</strong>
+      <br />
+      <span class="descriçao">Aguá com gaz geladinha</span>
+      <strong class="valor"> R$ 2,29</strong>
+    </div>
+
+    <!-- final container 1 -->
+  </section>
+
+
+
+  <strong class="primeiro">Sobremesas</strong>
+  <!-- container -->
+  <section class="container1 bolos margem">
+    <div class="caixa4 bolo1" onclick="doce('bolo1', 'bolo de cenoura')">
+      <img src="imagens/bolo.jpg" class="fotos" alt="">
+      <strong class="nome">bolo de chocolate</strong>
+      <br />
+      <span class="descriçao"> bolo fofinho e quentinho</span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
+
+
+    <div class="caixa4 bolo2" onclick="doce('bolo2', 'cocada')">
+      <img src="imagens/cake.jpg" class="fotos" alt="">
+      <strong class="nome">cup-cake</strong>
+      <br />
+      <span class="descriçao"> pequeno e delicioso</span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
+
+    <div class="caixa4 bolo3" onclick="doce('bolo3', 'brawnie')">
+      <img src="imagens/trufas.jpg" class="fotos" alt="">
+      <strong class="nome">Trufa recheada</strong>
+      <br />
+      <span class="descriçao"> trafa com muito recheio</span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
+
+    <div class="caixa4 bolo4" onclick="doce('bolo4', 'brigadeiro')">
+      <img src="imagens/brigadeiro.jpg" class="fotos" alt="">
+      <strong class="nome"> Brigadeiro</strong>
+      <br />
+      <span class="descriçao"> 15un brigadeiro </span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
+
+    <div class="caixa4 bolo5" onclick="doce('bolo5', 'mouse de maracuja')">
+      <img src="imagens/fuba.jpg" class="fotos" alt="">
+      <strong class="nome"> Bolo de fuba </strong>
+      <br />
+      <span class="descriçao">Tamanho familia super saboroso </span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
+
+    <div class="caixa4 bolo6" onclick="doce('bolo6', 'pe de moleque')">
+      <img src="imagens/pedemoleque.jpg" class="fotos" alt="">
+      <strong class="nome">Pé de moleque</strong>
+      <br />
+      <span class="descriçao">Amendoin com caramelo</span>
+      <strong class="valor"> R$ 14,99</strong>
+    </div>
+
+    <!-- final container 1 -->
+  </section>
+
+
+  <div class="branco" onclick="habilitar('.fim')">
+
+    <a href="#" class="finalizar fazerpedido" onclick="habilitarbotao(`.fazerpedido`, `finalizar`)"> finalizar pedido
+    </a>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
